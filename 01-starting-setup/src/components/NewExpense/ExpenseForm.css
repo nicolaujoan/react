@@ -1,0 +1,31 @@
+form {
+    background-color: rgb(255, 82, 255);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 2%;
+}
+
+.new-expense__controls {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.new-expense__control {
+    margin-bottom: 1%;
+}
+
+.new-expense__control input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: small;
+}
+
+.new-expense__control input:focus {
+    background-color: lightblue;
+}
+
+.new-expense__actions {
+    margin-left: 1%;   
+    margin-bottom: 1%; 
+}

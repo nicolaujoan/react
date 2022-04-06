@@ -1,0 +1,6 @@
+.expenses-list {
+    background-color: rgb(204, 161, 245);
+    border-radius: 50px;
+    padding: 2%;
+    /* some styles extracted to Card.css to avoid code duplication */
+}
