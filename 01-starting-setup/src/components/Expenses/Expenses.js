@@ -14,19 +14,10 @@ const Expenses = (props) => {
   return (
     <div>
       <Card className="expenses-list">
-        <ExpenseFilter onChangeYear={changeYearHandler} />
-        <ExpenseItem
-          title={props.expenses[0].title}
-          amount={props.expenses[0].amount}
-        ></ExpenseItem>
-        <ExpenseItem
-          title={props.expenses[1].title}
-          amount={props.expenses[1].amount}
-        ></ExpenseItem>
-        <ExpenseItem
-          title={props.expenses[2].title}
-          amount={props.expenses[2].amount}
-        ></ExpenseItem>
+        <ExpenseFilter selected={year} onChangeYear={changeYearHandler} />
+        {props.expenses.map((e) => (
+          <ExpenseItem title={e.title} amount={e.amount}></ExpenseItem>
+        ))}
       </Card>
     </div>
   );

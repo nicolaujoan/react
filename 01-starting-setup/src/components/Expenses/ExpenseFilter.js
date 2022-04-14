@@ -10,7 +10,7 @@ const ExpenseFilter = (props) => {
     <div className="wrapper">
       <div className="flex-container">
         <div className="title">Filter by year</div>
-        <select className="year" onChange={yearChangeHandler}>
+        <select value={props.selected} className="year" onChange={yearChangeHandler}>
           <option value={2022}>2022</option>
           <option value={2023}>2023</option>
           <option value={2024}>2024</option>

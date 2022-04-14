@@ -16,12 +16,8 @@ const ExpenseItem = props => {
     const day = date.toLocaleString('en-US', {day: 'numeric'});
 
     // array destructuring
-    const [title, setTitle] = useState(props.title); // important ---> props inside use state
+    const [title, setTitle] = useState(props.title);  // not used yet, not modifying title
     
-    // handler
-    const clickHandler = () => {
-        setTitle('updated title!!!');
-    }
 
     return (<Card className='expense-item'>
        <Calendar day={day} month={month} year={year}></Calendar>
@@ -29,7 +25,6 @@ const ExpenseItem = props => {
             <h2>{title}</h2>
             <div className='expense-item__price'>{"$" + props.amount}</div>
         </div>
-        <button onClick={clickHandler}>change title</button>
         </Card>)
 }
 
