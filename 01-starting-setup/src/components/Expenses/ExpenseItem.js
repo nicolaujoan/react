@@ -10,8 +10,8 @@ import Card from '../UI/Card';
 
 const ExpenseItem = props => {
 
-    const date = new Date(2021, 2, 28);
-    const month = date.getMonth();
+    const date = props.date;
+    const month = date.getMonth() + 1;  // inverstigate causes
     const year = date.getFullYear();
     const day = date.toLocaleString('en-US', {day: 'numeric'});
 

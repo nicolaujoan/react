@@ -4,16 +4,17 @@ import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   const DUMMY_DATA = [
-    { title: "Car insurance", amount: 200 },
-    { title: "padel game", amount: 30 },
-    { title: "expensive dinner", amount: 50.23 },
+    { id: 0, title: "Car insurance", amount: 200, date: (new Date(2021, 5, 15)) },
+    { id: 1, title: "padel game", amount: 30, date: (new Date(2022, 4, 20)) },
+    { id: 2, title: "expensive dinner", amount: 50.23, date: (new Date(2021, 2, 28)) },
   ];
 
   const [expenses, setExpenses] = useState(DUMMY_DATA);
 
   const addExpenseHandler = (newExpense) => {
+    console.log('new expense: ', newExpense);
     setExpenses((prevExpenses) => {
-      return [...prevExpenses, newExpense]; // updating state depending on previous state
+      return [newExpense, ...prevExpenses]; // updating state depending on previous state
     });
   };
 
